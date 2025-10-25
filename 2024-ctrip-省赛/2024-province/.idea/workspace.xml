@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="8a3bb1b4-bf4c-44a8-8f8f-d0d11391b3fd" name="Changes" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHomeTypeForPersistence" value="WRAPPER" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8
+}</component>
+  <component name="ProjectId" id="34SG8yx5N8Xnfri9mRomTWMrUOT" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "JUnit.TestCtrip.test_Ctrip_R001.executor": "Run",
+    "JUnit.TestCtrip.test_Ctrip_R002.executor": "Run",
+    "JUnit.TestCtrip.test_Ctrip_R003.executor": "Run",
+    "JUnit.TestCtrip.test_Ctrip_R004.executor": "Run",
+    "JUnit.TestCtrip.test_Ctrip_R005.executor": "Run",
+    "JUnit.TestCtrip.test_Ctrip_R006.executor": "Run",
+    "JUnit.TestCtrip.test_Ctrip_R007.executor": "Run",
+    "JUnit.TestCtrip.test_Ctrip_R008.executor": "Run",
+    "JUnit.TestCtrip.test_Ctrip_R009.executor": "Run",
+    "JUnit.TestCtrip.test_Ctrip_R010.executor": "Run",
+    "JUnit.TestCtrip.test_Ctrip_R011.executor": "Run",
+    "JUnit.XczxTest.testAllFeaturesSequence.executor": "Run",
+    "JUnit.省赛TestCtrip答案.test_Ctrip_R001.executor": "Run",
+    "JUnit.省赛TestCtrip答案.test_Ctrip_R007.executor": "Run",
+    "Maven.demo [org.apache.maven.plugins:maven-clean-plugin:3.3.2:clean].executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "E:/比赛/软件测试/Java项目/2024-province/src/test/java/org/example/test",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\比赛\软件测试\Java项目\2024-province\src\test\java\org\example\test" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.TestCtrip.test_Ctrip_R011">
+    <configuration name="TestCtrip.test_Ctrip_R008" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.example.test" />
+      <option name="MAIN_CLASS_NAME" value="org.example.test.TestCtrip" />
+      <option name="METHOD_NAME" value="test_Ctrip_R008" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestCtrip.test_Ctrip_R009" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.example.test" />
+      <option name="MAIN_CLASS_NAME" value="org.example.test.TestCtrip" />
+      <option name="METHOD_NAME" value="test_Ctrip_R009(java.lang.String,java.lang.String,java.lang.String)" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestCtrip.test_Ctrip_R010" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.example.test" />
+      <option name="MAIN_CLASS_NAME" value="org.example.test.TestCtrip" />
+      <option name="METHOD_NAME" value="test_Ctrip_R010(java.lang.String,java.lang.String,java.lang.String,java.lang.String)" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestCtrip.test_Ctrip_R011" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.example.test" />
+      <option name="MAIN_CLASS_NAME" value="org.example.test.TestCtrip" />
+      <option name="METHOD_NAME" value="test_Ctrip_R011(java.lang.String,java.lang.String,java.lang.String,java.lang.String)" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="省赛TestCtrip答案.test_Ctrip_R007" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.example.test" />
+      <option name="MAIN_CLASS_NAME" value="org.example.test.省赛TestCtrip答案" />
+      <option name="METHOD_NAME" value="test_Ctrip_R007(java.lang.String,java.lang.String,java.lang.String)" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="2024-province" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="test" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="org.example.test.Application" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.TestCtrip.test_Ctrip_R011" />
+        <item itemvalue="JUnit.TestCtrip.test_Ctrip_R010" />
+        <item itemvalue="JUnit.TestCtrip.test_Ctrip_R009" />
+        <item itemvalue="JUnit.TestCtrip.test_Ctrip_R008" />
+        <item itemvalue="JUnit.省赛TestCtrip答案.test_Ctrip_R007" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-bf35d07a577b-intellij.indexing.shared.core-IU-252.26830.84" />
+        <option value="bundled-js-predefined-d6986cc7102b-3aa1da707db6-JavaScript-IU-252.26830.84" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="8a3bb1b4-bf4c-44a8-8f8f-d0d11391b3fd" name="Changes" comment="" />
+      <created>1761199404923</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1761199404923</updated>
+      <workItem from="1761199406606" duration="2110000" />
+      <workItem from="1761202397022" duration="6397000" />
+      <workItem from="1761209916791" duration="5000" />
+      <workItem from="1761271031161" duration="754000" />
+      <workItem from="1761275411554" duration="4830000" />
+      <workItem from="1761295354221" duration="4000" />
+      <workItem from="1761387026592" duration="3688000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
