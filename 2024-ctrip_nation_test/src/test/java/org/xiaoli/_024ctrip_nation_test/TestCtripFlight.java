@@ -531,79 +531,377 @@ public class TestCtripFlight {
 
 
 
-
+//   未完成~~最后一个专用
     // 3.3 中转换乘车票查询
-    @ParameterizedTest
-    @CsvSource({
-            "哈尔滨, 济南, CtripFlight_R009_001",
-            "哈尔滨, 西安, CtripFlight_R009_002",
-            "哈尔滨, 拉萨, CtripFlight_R009_003",
-            "长春, 济南, CtripFlight_R009_004",
-            "长春, 西安, CtripFlight_R009_005",
-            "长春, 拉萨, CtripFlight_R009_006",
-            "安吉, 济南, CtripFlight_R009_007",
-            "安吉, 西安, CtripFlight_R009_008",
-            "安吉, 拉萨, CtripFlight_R009_009"
-    })
-    public void test_CtripFlight_R009(String fromCity, String toCity, String caseId) {
-        // R009: 有效中转查询 (不指定中转城市) [cite: 58]
-        // String date = competitionDatePlusOne; [cite: 61]
+    @Test
+    public void test_CtripFlight_R009() throws InterruptedException {
 
-        takeScreenshot(caseId + ".png");
+        test_meth_public();
+        init.click();
+        flightTab.click();
+        Thread.sleep(500);
+        WangFan.click();
+        departCityInput.click();
+        Actions actions = new  Actions(driver);
+        actions.sendKeys(Keys.BACK_SPACE).perform();
+        Thread.sleep(1000);
+        departCityInput.sendKeys("北京");
+        Thread.sleep(500);
+        actions.sendKeys(Keys.ENTER).perform();
+        Thread.sleep(1000);
+        actions.sendKeys(Keys.BACK_SPACE).perform();
+        Thread.sleep(500);
+        arriveCityInput.sendKeys("上海");
+        Thread.sleep(500);
+        actions.sendKeys(Keys.ENTER).perform();
+        Thread.sleep(1000);
+        click_date.click();
+        Thread.sleep(500);
+//        departDateInput.click();
+        driver.findElement(By.xpath("(//div[@class='date-day '])[23]")).click();
+
+        driver.findElement(By.xpath("(//span[contains(@class,'date-d')][normalize-space()='17'])[1]")).click();
+        Thread.sleep(500);
+        searchButton.click();
+        try {
+            // 使用显示等待方法等待元素出现
+            WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+            wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//span[@class='form-label']")));
+            System.out.println("元素已找到");
+        } catch (TimeoutException e) {
+            System.out.println("等待超时，未找到元素");
+        }
+        driver.findElement(By.xpath("//div[contains(text(),'邻近航线')]")).click();
+//      缺口程航线
+        driver.findElement(By.xpath("//div[@class='recommend-content']")).click();
+        try {
+            // 使用显示等待方法等待元素出现
+            WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+            wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//span[@class='form-label']")));
+            System.out.println("元素已找到");
+        } catch (TimeoutException e) {
+            System.out.println("等待超时，未找到元素");
+        }
+
+
+
+
+        takeScreenshot("CtripFlight_R009_001"+ ".png");
     }
 
 
+    @FindBy(xpath = "//li[contains(@class,'last')]//span[@class='radio-label']")
+    WebElement DuoCheng;
 
 
-    @ParameterizedTest
-    @CsvSource({
-            "北京, 上海, @@@, CtripFlight_R010_001",
-            "广州, 成都, 123, CtripFlight_R010_002",
-            "哈尔滨, 拉萨, NonExistent, CtripFlight_R010_003"
-    })
-    public void test_CtripFlight_R010(String fromCity, String toCity, String invalidTransferCity, String caseId) {
-        // R010: 无效中转城市 [cite: 62]
-        // String date = competitionDatePlusOne; [cite: 65]
+    @FindBy(name = "mtDCity1")
+    WebElement Fcity1;
 
-        takeScreenshot(caseId + ".png");
+    @FindBy(name = "mtDCity2")
+    WebElement Fcity2;
+
+    @FindBy(name = "mtDCity3")
+    WebElement Fcity3;
+
+    @FindBy(name = "mtDCity4")
+    WebElement Fcity4;
+
+
+    @FindBy(name = "mtACity1")
+    WebElement Tcity1;
+
+    @FindBy(name = "mtACity2")
+    WebElement Tcity2;
+
+    @FindBy(name = "mtACity3")
+    WebElement Tcity3;
+
+    @FindBy(name = "mtACity4")
+    WebElement Tcity4;
+
+    @FindBy(xpath = "(//input[contains(@aria-label,'请选择日期')])[1]")
+    WebElement date1;
+
+    @FindBy(xpath = "(//input[contains(@aria-label,'请选择日期')])[2]")
+    WebElement date2;
+
+    @FindBy(xpath = "(//input[contains(@aria-label,'请选择日期')])[3]")
+    WebElement date3;
+
+    @FindBy(xpath = "(//input[contains(@aria-label,'请选择日期')])[4]")
+    WebElement date4;
+
+
+
+    @Test
+    public void test_CtripFlight_R010() throws InterruptedException {
+        test_meth_public();
+        init.click();
+        flightTab.click();
+        Thread.sleep(500);
+        DuoCheng.click();
+        Fcity1.click();
+        Actions actions = new  Actions(driver);
+        actions.sendKeys(Keys.BACK_SPACE).perform();
+        Fcity1.sendKeys("北京");
+        Thread.sleep(500);
+        actions.sendKeys(Keys.ENTER).perform();
+
+        Tcity1.click();
+        actions.sendKeys(Keys.BACK_SPACE).perform();
+        Tcity1.sendKeys("上海");
+        Thread.sleep(500);
+        actions.sendKeys(Keys.ENTER).perform();
+        Thread.sleep(1000);
+
+        date1.click();
+        driver.findElement(By.xpath("(//span[@class='date-d'][normalize-space()='19'])[1]")).click();
+        Thread.sleep(2000);
+
+        Fcity2.click();
+        Fcity2.sendKeys(Keys.chord(Keys.CONTROL, "a"));
+        Thread.sleep(1000);
+        Fcity2.sendKeys(Keys.DELETE); // 或者 Keys.BACK_SPACE
+        Fcity2.sendKeys("北京");
+
+
+
+
+        Thread.sleep(1000);
+        actions.sendKeys(Keys.ENTER).perform();
+
+        searchButton.click();
+
+
+
+
+        takeScreenshot("CtripFlight_R010_001.png");
     }
 
-    @ParameterizedTest
-    @CsvSource({
-            "哈尔滨, 南京, 济南, CtripFlight_R011_001",
-            "哈尔滨, 南京, 安阳, CtripFlight_R011_002",
-            "哈尔滨, 南京, 周口, CtripFlight_R011_003"
-    })
-    public void test_CtripFlight_R011(String fromCity, String toCity, String transferCity, String caseId) {
-        // R011: 指定中转城市查询与排序 [cite: 67]
-        // String date = competitionDatePlusTwo; [cite: 70]
+    @Test
+    public void test_CtripFlight_R011() throws InterruptedException {
+        test_meth_public();
+        init.click();
+        flightTab.click();
+        Thread.sleep(500);
+        DuoCheng.click();
+        Fcity1.click();
+        Actions actions = new  Actions(driver);
+        actions.sendKeys(Keys.BACK_SPACE).perform();
+        Fcity1.sendKeys("北京");
+        Thread.sleep(500);
+        actions.sendKeys(Keys.ENTER).perform();
 
-        takeScreenshot(caseId + ".png");
+        Tcity1.click();
+        actions.sendKeys(Keys.BACK_SPACE).perform();
+        Tcity1.sendKeys("北京");
+        Thread.sleep(500);
+        actions.sendKeys(Keys.ENTER).perform();
+        Thread.sleep(500);
+        searchButton.click();
+
+
+        takeScreenshot( "CtripFlight_R011_001.png");
     }
 
     // 3.4 计次/定期车票查询
-    @ParameterizedTest
-    @CsvSource({
-            "北京南, 天津, CtripFlight_R012_001",
-            "上海虹桥, 杭州东, CtripFlight_R012_002",
-            "广州南, 深圳北, CtripFlight_R012_003"
-    })
-    public void test_CtripFlight_R012(String fromCity, String toCity, String caseId) {
-        // R012: 有效计次/定期票查询 [cite: 73]
+    @Test
+    public void test_CtripFlight_R012() throws InterruptedException {
+        test_meth_public();
+        init.click();
+        flightTab.click();
+        Thread.sleep(500);
+        DuoCheng.click();
+        Fcity1.click();
+        Actions actions = new  Actions(driver);
+        actions.sendKeys(Keys.BACK_SPACE).perform();
+        Fcity1.sendKeys("北京");
+        Thread.sleep(500);
+        actions.sendKeys(Keys.ENTER).perform();
 
-        takeScreenshot(caseId + ".png");
+        Tcity1.click();
+        actions.sendKeys(Keys.BACK_SPACE).perform();
+        Tcity1.sendKeys("上海");
+        Thread.sleep(500);
+        actions.sendKeys(Keys.ENTER).perform();
+        Thread.sleep(1000);
+
+        date1.click();
+        driver.findElement(By.xpath("(//span[@class='date-d'][normalize-space()='19'])[1]")).click();
+        Thread.sleep(2000);
+
+
+        Fcity2.click();
+        Fcity2.sendKeys(Keys.chord(Keys.CONTROL, "a"));
+        Thread.sleep(1000);
+        Fcity2.sendKeys(Keys.DELETE);
+        Fcity2.sendKeys("郑州");
+        Thread.sleep(1000);
+        actions.sendKeys(Keys.ENTER).perform();
+
+
+        Tcity2.click();
+        Tcity2.sendKeys(Keys.chord(Keys.CONTROL, "a"));
+        Thread.sleep(1000);
+        Tcity2.sendKeys(Keys.DELETE);
+        Tcity2.sendKeys("哈尔滨");
+        Thread.sleep(1000);
+        actions.sendKeys(Keys.ENTER).perform();
+
+        date2.click();
+        driver.findElement(By.xpath("(//span[@class='date-d'][normalize-space()='20'])[1]")).click();
+        Thread.sleep(2000);
+
+
+
+        Fcity3.click();
+        Fcity3.sendKeys(Keys.chord(Keys.CONTROL, "a"));
+        Thread.sleep(1000);
+        Fcity3.sendKeys(Keys.DELETE);
+        Fcity3.sendKeys("上海");
+        Thread.sleep(1000);
+        actions.sendKeys(Keys.ENTER).perform();
+
+
+        Tcity3.click();
+        Tcity3.sendKeys(Keys.chord(Keys.CONTROL, "a"));
+        Thread.sleep(1000);
+        Tcity3.sendKeys(Keys.DELETE);
+        Tcity3.sendKeys("厦门");
+        Thread.sleep(1000);
+        actions.sendKeys(Keys.ENTER).perform();
+
+        date3.click();
+        driver.findElement(By.xpath("(//span[@class='date-d'][normalize-space()='21'])[1]")).click();
+        Thread.sleep(2000);
+
+
+        searchButton.click();
+
+        takeScreenshot("CtripFlight_R012_001.png");
     }
 
-    @ParameterizedTest
-    @CsvSource({
-            "北京南, 广州南, CtripFlight_R013_001",
-            "123, @#$, CtripFlight_R013_002",
-            "上海, 拉萨, CtripFlight_R013_003"
-    })
-    public void test_CtripFlight_R013(String fromCity, String toCity, String caseId) {
+//  有bug~~
+    @Test
+    public void test_CtripFlight_R013() throws InterruptedException {
         // R013: 无效计次/定期票查询 [cite: 76]
+        test_meth_public();
+        init.click();
+        flightTab.click();
+        Thread.sleep(500);
+        DuoCheng.click();
 
-        takeScreenshot(caseId + ".png");
+        driver.findElement(By.xpath("//a[contains(text(),'+ 再加一程')]")).click();
+        Thread.sleep(500);
+        driver.findElement(By.xpath("//a[contains(text(),'+ 再加一程')]")).click();
+        Thread.sleep(500);
+        driver.findElement(By.xpath("//a[contains(text(),'+ 再加一程')]")).click();
+        Thread.sleep(500);
+        driver.findElement(By.xpath("//div[6]//a[1]//i[1]")).click();
+        Thread.sleep(500);
+        driver.findElement(By.xpath("//div[5]//a[1]//i[1]")).click();
+
+        Fcity1.click();
+        Actions actions = new  Actions(driver);
+        actions.sendKeys(Keys.BACK_SPACE).perform();
+        Fcity1.sendKeys("上海");
+        Thread.sleep(500);
+        actions.sendKeys(Keys.ENTER).perform();
+
+        Tcity1.click();
+        actions.sendKeys(Keys.BACK_SPACE).perform();
+        Tcity1.sendKeys("北京");
+        Thread.sleep(500);
+        actions.sendKeys(Keys.ENTER).perform();
+        Thread.sleep(1000);
+
+        date1.click();
+        driver.findElement(By.xpath("(//span[@class='date-d'][normalize-space()='19'])[1]")).click();
+        Thread.sleep(2000);
+
+
+        Fcity2.click();
+        Fcity2.sendKeys(Keys.chord(Keys.CONTROL, "a"));
+        Thread.sleep(1000);
+        Fcity2.sendKeys(Keys.DELETE);
+        Fcity2.sendKeys("北京");
+        Thread.sleep(1000);
+        actions.sendKeys(Keys.ENTER).perform();
+
+
+        Tcity2.click();
+        Tcity2.sendKeys(Keys.chord(Keys.CONTROL, "a"));
+        Thread.sleep(1000);
+        Tcity2.sendKeys(Keys.DELETE);
+        Tcity2.sendKeys("首尔");
+        Thread.sleep(1000);
+        actions.sendKeys(Keys.ENTER).perform();
+
+        date2.click();
+        driver.findElement(By.xpath("(//span[@class='date-d'][normalize-space()='20'])[1]")).click();
+        Thread.sleep(2000);
+
+
+
+        Fcity3.click();
+        Fcity3.sendKeys(Keys.chord(Keys.CONTROL, "a"));
+        Thread.sleep(1000);
+        Fcity3.sendKeys(Keys.DELETE);
+        Fcity3.sendKeys("首尔");
+        Thread.sleep(1000);
+        actions.sendKeys(Keys.ENTER).perform();
+
+
+        Tcity3.click();
+        Tcity3.sendKeys(Keys.chord(Keys.CONTROL, "a"));
+        Thread.sleep(1000);
+        Tcity3.sendKeys(Keys.DELETE);
+        Tcity3.sendKeys("东京");
+        Thread.sleep(1000);
+        actions.sendKeys(Keys.ENTER).perform();
+
+        date3.click();
+        driver.findElement(By.xpath("(//span[@class='date-d'][normalize-space()='21'])[1]")).click();
+        Thread.sleep(2000);
+
+//      第4个选项
+        Fcity4.click();
+        Fcity4.sendKeys(Keys.chord(Keys.CONTROL, "a"));
+        Thread.sleep(1000);
+        Fcity4.sendKeys(Keys.DELETE);
+        Fcity4.sendKeys("首尔");
+        Thread.sleep(1000);
+        actions.sendKeys(Keys.ENTER).perform();
+
+
+        Tcity4.click();
+        Tcity4.sendKeys(Keys.chord(Keys.CONTROL, "a"));
+        Thread.sleep(1000);
+        Tcity4.sendKeys(Keys.DELETE);
+        Tcity4.sendKeys("东京");
+        Thread.sleep(1000);
+        actions.sendKeys(Keys.ENTER).perform();
+
+        date4.click();
+        driver.findElement(By.xpath("(//span[@class='date-d'][normalize-space()='22'])[1]")).click();
+        Thread.sleep(2000);
+
+
+        searchButton.click();
+
+        Thread.sleep(10000);
+        driver.findElement(By.xpath("//div[@class='flight-list root-flights']//span//div//div//div//div[@class='flight-item domestic']//div[@class='btn btn-book'][contains(text(),'选为第1程')]")).click();
+
+        Thread.sleep(10000);
+        driver.findElement(By.xpath("(//div[@class='btn btn-book'])[1]")).click();
+        Thread.sleep(10000);
+        driver.findElement(By.xpath("(//div[@class='btn btn-book'][contains(text(),'选为第3程')])[1]"));
+        Thread.sleep(1000);
+        driver.findElement(By.xpath("//div[@class='flight-list root-flights select-flight']//span//div//div//div//div[@class='flight-item domestic']//button[@class='btn btn-book txt-overflow'][contains(text(),'订票')]")).click();
+        Thread.sleep(1000);
+        driver.findElement(By.xpath("//span[@class='abbr']")).click();
+        Thread.sleep(2000);
+        takeScreenshot( "CtripFlight_R013_001.png");
     }
     // test-code-end
 
