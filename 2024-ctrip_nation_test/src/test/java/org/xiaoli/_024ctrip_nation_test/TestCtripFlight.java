@@ -887,6 +887,7 @@ public class TestCtripFlight {
         Thread.sleep(2000);
 
 
+
         searchButton.click();
 
         Thread.sleep(10000);
